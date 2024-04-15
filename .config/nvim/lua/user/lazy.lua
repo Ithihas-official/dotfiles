@@ -1,0 +1,230 @@
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+  -- THEMES
+  { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
+  { "bluz71/vim-moonfly-colors",  name = "moonfly",  lazy = false, priority = 1000 },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    "AlexvZyl/nordic.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  { "catppuccin/nvim",      name = "catppuccin", priority = 1000 },
+  -- MARKDOWN PREVIEW
+  {
+
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && npm install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
+  -- NEORG
+  {
+    "vhyrro/luarocks.nvim",
+    priority = 1000,
+    config = true,
+  },
+  {
+    "nvim-neorg/neorg",
+    dependencies = { "luarocks.nvim" },
+    lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+  },
+  -- FILE MANAGER
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup({})
+    end,
+  },
+  -- NOTIFY
+  {
+    "rcarriga/nvim-notify",
+  },
+  -- STATUS LINE
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+  -- FLOATING CMD LINE
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    }
+  },
+  -- CODE OUTLINE
+  {
+    "stevearc/aerial.nvim",
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+  -- LSP
+  {
+    "williamboman/mason.nvim",
+  },
+  { "neovim/nvim-lspconfig" },
+  {
+    "williamboman/mason-lspconfig.nvim",
+  },
+
+  -- AUTO COMPLETE
+  {
+    "hrsh7th/nvim-cmp",
+  },
+  {
+    "hrsh7th/cmp-nvim-lsp",
+  },
+  {
+    "hrsh7th/cmp-buffer",
+  },
+  {
+    "hrsh7th/cmp-path", -- Optional
+  },
+  {
+    "saadparwaiz1/cmp_luasnip", -- Optional
+  },
+  {
+    "hrsh7th/cmp-nvim-lua", -- Optional
+  },
+
+  -- SNIPPETS
+  {
+    "L3MON4D3/LuaSnip", -- Required
+    version = "v2.*",   -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!).
+    build = "make install_jsregexp",
+  },
+  {
+    "rafamadriz/friendly-snippets", -- Optional
+  },
+  -- FORMATTER
+  {
+    "stevearc/conform.nvim",
+    event = { "BufEnter", "BufNewFile", "BufWritePost" },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+  },
+  -- LINTER
+  {
+    "mfussenegger/nvim-lint",
+    event = { "BufEnter", "BufNewFile", "BufWritePost" },
+  },
+
+  -- AUTO HIGHLIGHT
+  {
+    "RRethy/vim-illuminate",
+  },
+  {
+    "kevinhwang91/nvim-ufo",
+    dependencies = "kevinhwang91/promise-async",
+  },
+  -- FILE FINDER
+  {
+    "nvim-telescope/telescope.nvim",
+    --tag = '0.1.4'   , or
+    branch = "0.1.x",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+  -- PROJECT MANAGER
+  {
+    "ahmedkhalf/project.nvim",
+  },
+  -- BUFFFERLINE
+  {
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    opts = {
+      -- configurations go here
+    },
+  },
+  {
+    "akinsho/bufferline.nvim",
+    version = "*",
+    dependencies = "nvim-tree/nvim-web-devicons",
+  },
+  -- TERMINAL INTEGRATION
+  {
+    { "akinsho/toggleterm.nvim", version = "*", config = true },
+  },
+  -- AUTO PAIR
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {}, -- this is equalent to setup({}) function
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+  },
+  -- GIT INTERGRATION
+  {
+    "lewis6991/gitsigns.nvim",
+  },
+  -- INDENTATION
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+  },
+  -- COMMMENTS
+  {
+    "numToStr/Comment.nvim",
+    lazy = false,
+  },
+  -- SCREEN STARTUP
+  {
+    "startup-nvim/startup.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+  },
+  -- TELESCOPE BROWSER
+  {
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+  },
+})
