@@ -51,26 +51,27 @@ require("lualine").setup({
 
         separator = { right = "" },
       },
+
+      {
+        "diagnostics",
+        sources = { "nvim_diagnostic" },
+        symbols = { error = " ", warn = " ", info = " " },
+        separator = { right = "" },
+      },
     },
     lualine_c = {
 
       {
-        "mode",
-        separator = { right = "）" },
-      }, {
-      "diagnostics",
-      sources = { "nvim_diagnostic" },
-      symbols = { error = " ", warn = " ", info = " " },
-      separator = { right = "）" },
-    },
-
+        "branch",
+      },
+      {
+        "diff",
+        symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
+        separator = { right = "）" }
+      },
     },
     lualine_x = {
 
-      {
-        "branch",
-        separator = { left = "（" },
-      },
       {
         lspGen,
         icon = " LSP:",

@@ -14,7 +14,7 @@ keymap("n", "<leader>c", ":nohlsearch<CR>", opts)
 
 -- Define a function to exit insert mode with "ii"
 function exit_insert_mode()
-	vim.cmd("inoremap ii <Esc>")
+  vim.cmd("inoremap ii <Esc>")
 end
 
 -- Call the function when entering insert mode
@@ -29,8 +29,6 @@ vim.cmd("autocmd InsertEnter * lua exit_insert_mode()")
 --   command_mode = "c",
 
 -- Normal --
--- managing buffers
-keymap("n", "<leader>d", ":bd<CR>", opts)
 -- vertical split and split
 keymap("n", "<leader>vs", ":vs<CR>", opts)
 keymap("n", "<leader>s", ":split<CR>", opts)
@@ -49,8 +47,8 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+-- keymap("n", "<S-l>", ":bnext<CR>", opts)
+-- keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode

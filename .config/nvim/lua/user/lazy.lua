@@ -172,6 +172,21 @@ require("lazy").setup({
   },
   -- BUFFFERLINE
   {
+    'romgrk/barbar.nvim',
+    dependencies = {
+      'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
+      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+    },
+    init = function() vim.g.barbar_auto_setup = false end,
+    opts = {
+      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+      -- animation = true,
+      -- insert_at_start = true,
+      -- …etc.
+    },
+    version = '^1.0.0', -- optional: only update when a new 1.x version is released
+  },
+  {
     "utilyre/barbecue.nvim",
     name = "barbecue",
     version = "*",
@@ -182,11 +197,6 @@ require("lazy").setup({
     opts = {
       -- configurations go here
     },
-  },
-  {
-    "akinsho/bufferline.nvim",
-    version = "*",
-    dependencies = "nvim-tree/nvim-web-devicons",
   },
   -- TERMINAL INTEGRATION
   {
@@ -219,8 +229,9 @@ require("lazy").setup({
   },
   -- SCREEN STARTUP
   {
-    "startup-nvim/startup.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    dependencies = { { 'nvim-tree/nvim-web-devicons' } }
   },
   -- TELESCOPE BROWSER
   {

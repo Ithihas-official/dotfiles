@@ -1,30 +1,16 @@
--- local highlight1 = {
---   "CursorColumn",
---   "Whitespace",
--- }
--- local highlight2 = {
---   "Function",
---   "Label",
--- }
 require("ibl").setup({
-  -- enabled = true,
-  -- debounce = 100,
-  -- indent = {
-  --   char = "┊",
-  --   highlight = highlight2,
-  --   priority = 2,
-  --   repeat_linebreak = false,
-  -- },
-  -- whitespace = {
-  --   highlight = highlight1,
-  --   remove_blankline_trail = true,
-  -- },
-  -- scope = {
-  --   enabled = true,
-  --   char = "┃",
-  --   show_start = true,
-  --   show_end = true,
-  --   injected_languages = true,
-  --   highlight = highlight2,
-  -- },
+  exclude = {
+    filetypes = {
+      "lspinfo",
+      "packer",
+      "checkhealth",
+      "help",
+      "man",
+      "gitcommit",
+      "TelescopePrompt",
+      "TelescopeResults",
+      "''",
+      "dashboard"
+    }
+  }
 })
