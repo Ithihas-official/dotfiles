@@ -1,9 +1,11 @@
 local lint = require("lint")
 
-require("lint").linters_by_ft = {
+lint.linters_by_ft = {
 	markdown = { "markdownlint" },
 	javascript = { "eslint_d" },
 	javascriptreact = { "eslint_d" },
+	typescipt = { "eslint_d" },
+	typescriptreact = { "eslint_d" },
 	lua = { "selene" },
 	c = { "cpplint" },
 	cpp = { "cpplint" },

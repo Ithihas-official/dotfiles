@@ -87,7 +87,7 @@ skin=nicedark
 
 [Layout]
 output_lines=0
-left_panel_size=41
+left_panel_size=85
 top_panel_size=20
 message_visible=true
 keybar_visible=true
@@ -115,6 +115,7 @@ clipboard_paste=
 base_color=
 screen-256color=
 color_terminals=
+xterm-256color=
 
 [Panels]
 simple_swap=false
@@ -139,7 +140,7 @@ quick_search_mode=2
 select_flags=6
 
 [Panelize]
-Modified git files=git ls-files --modified
 Find *.orig after patching=find . -name \\*.orig -print
+Modified git files=git ls-files --modified
 Find rejects after patching=find . -name \\*.rej -print
 Find SUID and SGID programs=find . \\( \\( -perm -04000 -a -perm /011 \\) -o \\( -perm -02000 -a -perm /01 \\) \\) -print
