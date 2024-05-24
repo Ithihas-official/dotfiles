@@ -38,17 +38,6 @@ require("lazy").setup({
 		end,
 		ft = { "markdown" },
 	},
-	-- NEORG
-	{
-		"vhyrro/luarocks.nvim",
-		priority = 1000,
-		config = true,
-	},
-	{
-		"nvim-neorg/neorg",
-		dependencies = { "luarocks.nvim" },
-		lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
-	},
 	-- FILE MANAGER
 	{
 		"nvim-tree/nvim-tree.lua",

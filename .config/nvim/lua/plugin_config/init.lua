@@ -1,5 +1,4 @@
 require("plugin_config.noice")
-require("plugin_config.neorg")
 require("plugin_config.themes")
 require("plugin_config.nvim_lint")
 require("plugin_config.conform")
