@@ -38,7 +38,8 @@ config.font_size = 12.0
 -- -- for example, this selects a Bold, Italic font variant.
 -- config.font =
 --   wezterm.font('JetBrains Mono', { weight = 'Bold', italic = true })
-
+-- CURSOR
+config.default_cursor_style = "BlinkingBar"
 -- SCROLL-BAR
 config.enable_scroll_bar = true
 --  TAB-BAR
