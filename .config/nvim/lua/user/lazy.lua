@@ -173,18 +173,19 @@ require("lazy").setup({
 		},
 		version = "^1.0.0", -- optional: only update when a new 1.x version is released
 	},
-	{
-		"utilyre/barbecue.nvim",
-		name = "barbecue",
-		version = "*",
-		dependencies = {
-			"SmiteshP/nvim-navic",
-			"nvim-tree/nvim-web-devicons", -- optional dependency
-		},
-		opts = {
-			-- configurations go here
-		},
-	},
+	-- winbar that locates where we are in the buffer
+  {
+  "utilyre/barbecue.nvim",
+  name = "barbecue",
+  version = "*",
+  dependencies = {
+    "SmiteshP/nvim-navic",
+    "nvim-tree/nvim-web-devicons", -- optional dependency
+  },
+  opts = {
+    -- configurations go here
+  },
+},
 	-- TERMINAL INTEGRATION
 	{
 		{ "akinsho/toggleterm.nvim", version = "*", config = true },

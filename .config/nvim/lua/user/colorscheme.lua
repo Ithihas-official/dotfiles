@@ -7,8 +7,8 @@ require("lualine").setup({
 	},
 })
 
-require("barbecue").setup({
-	options = {
-		theme = "auto",
-	},
-})
+-- require("barbecue").setup({
+-- 	options = {
+-- 		theme = "auto",
+-- 	},
+-- })
