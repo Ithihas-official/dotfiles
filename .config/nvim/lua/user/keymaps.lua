@@ -12,14 +12,8 @@ vim.g.maplocalleader = " "
 
 keymap("n", "<leader>c", ":nohlsearch<CR>", opts)
 
--- Define a function to exit insert mode with "ii"
-function exit_insert_mode()
-  vim.cmd("inoremap ii <Esc>")
-end
-
--- Call the function when entering insert mode
-vim.cmd("autocmd InsertEnter * lua exit_insert_mode()")
-
+vim.keymap.set("i", ";;", "<Esc>", opts)
+vim.keymap.set("v", ";;", "<Esc>", opts)
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
