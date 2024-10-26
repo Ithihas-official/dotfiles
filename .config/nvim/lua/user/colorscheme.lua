@@ -1,4 +1,4 @@
-vim.cmd("colorscheme rose-pine-main")
+vim.cmd("colorscheme catppuccin")
 
 require("lualine").setup({
 	options = {

@@ -10,7 +10,7 @@ local M = {
 
 function M.config()
 	vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
-	vim.keymap.set("n", "<leader>aa", "<cmd>AerialNavToggle<CR>")
+	-- vim.keymap.set("n", "<leader>aa", "<cmd>AerialNavToggle<CR>")
 	vim.keymap.set("n", "<leader>ta", "<cmd>Telescope aerial<CR>")
 
 	local my_icons = require("user.icons")

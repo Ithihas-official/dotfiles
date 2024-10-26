@@ -4,6 +4,7 @@ local M = {
 	dependencies = {
 		{
 			"SmiteshP/nvim-navic",
+			"SmiteshP/nvim-navbuddy",
 		},
 	},
 }
@@ -33,8 +34,8 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 	keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 end
-
 M.on_attach = function(client, bufnr)
+	local navbuddy = require("nvim-navbuddy")
 	lsp_keymaps(bufnr)
 	if client.server_capabilities["documentSymbolProvider"] then
 		require("nvim-navic").attach(client, bufnr)
@@ -59,6 +60,8 @@ M.on_attach = function(client, bufnr)
 			desc = "Clear All the References",
 		})
 	end
+
+	navbuddy.attach(client, bufnr)
 end
 
 M.toggle_inlay_hints = function()

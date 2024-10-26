@@ -34,7 +34,7 @@ function M.config()
 		attach_navic = false,
 		create_autocmd = false, -- prevent barbecue from updating itself automatically
 		show_dirname = false,
-		show_basename = true,
+		show_basename = false,
 		exclude_filetypes = { "aerial", "NvimTree" },
 		theme = {
 			-- this highlight is used to override other highlights
