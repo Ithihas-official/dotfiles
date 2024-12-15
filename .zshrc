@@ -1,6 +1,6 @@
 # ALIAS
 alias bare='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-alias update_grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+# alias update_grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 source ~/my_apps/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/my_apps/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -17,7 +17,7 @@ eval "$(starship init zsh)"
 export JAVA_HOME=~/my_apps/java/
 export PATH=$JAVA_HOME/bin:$PATH
 #GRADLE
-export  PATH=$HOME/my_apps/gradle/gradle-8.5/bin:$PATH
+export  PATH=$HOME/my_apps/gradle/bin:$PATH
 
 
 # YAZI
@@ -35,3 +35,11 @@ function yy() {
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
+
+
+#git init --bare $HOME/dotfiles
+# alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' (add this alias to .bashrc)
+# bash
+# config config --local status.showUntrackedFiles no
+
+

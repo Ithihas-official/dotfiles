@@ -1,4 +1,4 @@
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme catppuccin-latte")
 
 require("lualine").setup({
 	options = {

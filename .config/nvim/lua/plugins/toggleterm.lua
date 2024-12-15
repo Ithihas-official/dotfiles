@@ -7,7 +7,7 @@
 -- 			return vim.o.columns * 0.4
 -- 		end
 -- 	end,
--- 	open_mapping = [[<space>\]],
+	-- open_mapping = [[<space>\]],
 -- 	hide_numbers = true, -- hide the number column in toggleterm buffers
 -- 	autochdir = true, -- when neovim changes it current directory the terminal will change it's own when next it's opened
 -- 	persist_size = true,
@@ -95,7 +95,7 @@ function M.config()
 
 	require("toggleterm").setup({
 		size = 20,
-		open_mapping = [[<c-\>]],
+		open_mapping = [[<space>\]],
 		hide_numbers = true, -- hide the number column in toggleterm buffers
 		shade_filetypes = {},
 		shade_terminals = true,

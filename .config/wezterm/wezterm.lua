@@ -8,8 +8,8 @@ end
 -- SHELL
 config.default_prog = { "/bin/zsh" }
 -- THEMES
-config.color_scheme = "Afterglow"
-config.window_background_opacity = 1.0
+config.color_scheme = "Ashes (light) (terminal.sexy)"
+config.window_background_opacity = 0.9
 config.text_background_opacity = 1.0
 config.bold_brightens_ansi_colors = true
 -- WINDOW DECORATION
@@ -32,7 +32,7 @@ config.window_decorations = "NONE"
 -- }
 -- FONT
 config.warn_about_missing_glyphs = false
-config.font = wezterm.font("Lilex Nerd Font")
+config.font = wezterm.font("ZedMono Nerd Font")
 config.font_size = 12.0
 -- -- You can specify some parameters to influence the font selection;
 -- -- for example, this selects a Bold, Italic font variant.
@@ -41,7 +41,7 @@ config.font_size = 12.0
 -- CURSOR
 config.default_cursor_style = "BlinkingBar"
 -- SCROLL-BAR
-config.enable_scroll_bar = true
+config.enable_scroll_bar = false
 --  TAB-BAR
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
@@ -51,6 +51,13 @@ config.tab_max_width = 10
 config.hide_tab_bar_if_only_one_tab = true
 -- TAB-BAR-TOP-POSITION
 config.tab_bar_at_bottom = true
+-- WINDOW PADDING
+config.window_padding = {
+	left = 2,
+	right = 2,
+	top = 0,
+	-- bottom = 20,
+}
 -- TAB TITLE
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
 	local title = " tab " .. tab.tab_index .. " "

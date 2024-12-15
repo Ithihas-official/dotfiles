@@ -17,7 +17,7 @@ function M.config()
 			javascriptreact = { { "prettierd", "prettier" } },
 			html = { { "prettierd", "prettier" } },
 			css = { { "prettierd", "prettier" } },
-			json = { { "prettierd", "prettier" } },
+			json = { { "jq", "prettier" } },
 			yaml = { { "prettierd", "prettier" } },
 			markdown = { { "prettierd", "prettier" } },
 
