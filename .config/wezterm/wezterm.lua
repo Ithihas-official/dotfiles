@@ -8,7 +8,7 @@ end
 -- SHELL
 config.default_prog = { "/bin/zsh" }
 -- THEMES
-config.color_scheme = "Ashes (light) (terminal.sexy)"
+config.color_scheme = "Atelier Cave Light (base16)"
 config.window_background_opacity = 0.9
 config.text_background_opacity = 1.0
 config.bold_brightens_ansi_colors = true
