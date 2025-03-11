@@ -13,6 +13,7 @@ M.execs = {
 	"jdtls",
 	"lua_ls",
 	"unocss",
+	"html",
 	"emmet_ls",
 	"marksman",
 	"pyright",

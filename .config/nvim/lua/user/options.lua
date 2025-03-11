@@ -9,8 +9,8 @@ augroup END
 ]])
 
 -- Set the default split direction to vertical
-vim.o.splitright = true -- This ensures new vertical splits open to the right
 vim.o.splitbelow = false -- (Optional) You can use this to disable horizontal splits below by default
+vim.o.splitright = true
 vim.o.completeopt = "menuone,noinsert,noselect"
 vim.opt.shortmess = vim.opt.shortmess + "c"
 local options = {

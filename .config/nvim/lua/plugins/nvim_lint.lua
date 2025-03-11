@@ -8,10 +8,10 @@ function M.config()
 
 	lint.linters_by_ft = {
 		markdown = { "markdownlint" },
-		javascript = { "quick-lint-js" },
-		javascriptreact = { "quick-lint-js" },
-		typescipt = { "quick-lint-js" },
-		typescriptreact = { "quick-lint-js" },
+		javascript = { "quick-lint-js", "eslint", "eslint_d" },
+		javascriptreact = { "quick-lint-js", "eslint", "eslint_d" },
+		typescipt = { "quick-lint-js", "eslint", "eslint_d" },
+		typescriptreact = { "quick-lint-js", "eslint", "eslint_d" },
 		lua = { "selene" },
 		c = { "cpplint" },
 		cpp = { "cpplint" },

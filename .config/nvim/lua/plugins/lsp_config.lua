@@ -109,6 +109,7 @@ function M.config()
 		"lua_ls",
 		"unocss",
 		"eslint",
+		"html",
 		"emmet_ls",
 		"rust_analyzer",
 		"marksman",
@@ -118,7 +119,6 @@ function M.config()
 		"tailwindcss",
 		"yamlls",
 		"jdtls",
-		"html",
 		"quick_lint_js",
 	}
 

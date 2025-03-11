@@ -45,7 +45,11 @@ local M = {
 function M.config()
 	local cmp = require("cmp")
 	local luasnip = require("luasnip")
-
+	luasnip.config.setup({
+		history = true,
+		region_check_events = "InsertEnter",
+		delete_check_events = "TextChanged,InsertLeave",
+	})
 	require("luasnip.loaders.from_vscode").lazy_load()
 	-- require("luasnip").filetype_extend("javascript", { "javascriptreact" })
 	-- require("luasnip").filetype_extend("javascript", { "html" })

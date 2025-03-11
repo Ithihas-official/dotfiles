@@ -33,7 +33,7 @@ config.window_decorations = "NONE"
 -- FONT
 config.warn_about_missing_glyphs = false
 config.font = wezterm.font("ZedMono Nerd Font")
-config.font_size = 12.0
+config.font_size = 11.0
 -- -- You can specify some parameters to influence the font selection;
 -- -- for example, this selects a Bold, Italic font variant.
 -- config.font =

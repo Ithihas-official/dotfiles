@@ -11,15 +11,13 @@ function M.config()
 			python = { "black" },
 			c = { "clang_format" },
 			java = { "clang_format" },
-			-- Conform will run multiple formatters sequentially
-			-- Use a sub-list to run only the first available formatter
-			javascript = { { "prettierd", "prettier" } },
-			javascriptreact = { { "prettierd", "prettier" } },
-			html = { { "prettierd", "prettier" } },
-			css = { { "prettierd", "prettier" } },
-			json = { { "jq", "prettier" } },
-			yaml = { { "prettierd", "prettier" } },
-			markdown = { { "prettierd", "prettier" } },
+			javascript = {   "prettier"  },
+			javascriptreact = {  "prettier"  },
+			html = {  "prettier"  },
+			css = {  "prettier"  },
+			json = {  "jq" },
+			yaml = {  "prettier"  },
+			markdown = { "markdownlint"  },
 
 			-- Use the "*" filetype to run formatters on all filetypes.
 			["*"] = { "codespell" },
@@ -49,50 +47,50 @@ function M.config()
 		stop_after_first = false,
 		format = {
 			async = true,
-
-			formatters = {
-				my_formatter = {
-					-- This can be a string or a function that returns a string.
-					-- When defining a new formatter, this is the only field that is *required*
-					command = "my_cmd",
-					-- A list of strings, or a function that returns a list of strings
-					-- Return a single string instead of a list to run the command in a shell
-					args = { "--stdin-from-filename", "$FILENAME" },
-					-- If the formatter supports range formatting, create the range arguments here
-					range_args = function(ctx)
-						return { "--line-start", ctx.range.start[1], "--line-end", ctx.range["end"][1] }
-					end,
-					-- Send file contents to stdin, read new contents from stdout (default true)
-					-- When false, will create a temp file (will appear in "$FILENAME" args). The temp
-					-- file is assumed to be modified in-place by the format command.
-					stdin = true,
-					-- A function that calculates the directory to run the command in
-					cwd = require("conform.util").root_file({ ".editorconfig", "package.json" }),
-					-- When cwd is not found, don't run the formatter (default false)
-					require_cwd = true,
-					-- When returns false, the formatter will not be used
-					condition = function(ctx)
-						return vim.fs.basename(ctx.filename) ~= "README.md"
-					end,
-					-- Exit codes that indicate success (default { 0 })
-					exit_codes = { 0, 1 },
-					-- Environment variables. This can also be a function that returns a table.
-					env = {
-						VAR = "value",
-					},
-					-- Set to false to disable merging the config with the base definition
-					inherit = true,
-					-- When inherit = true, add these additional arguments to the command.
-					-- This can also be a function, like args
-					prepend_args = { "--use-tabs" },
-				},
-				-- These can also be a function that returns the formatter
-				other_formatter = function(bufnr)
-					return {
-						command = "my_cmd",
-					}
-				end,
-			},
+			lsp_format = "fallback",
+			-- formatters = {
+			-- 	my_formatter = {
+			-- 		-- This can be a string or a function that returns a string.
+			-- 		-- When defining a new formatter, this is the only field that is *required*
+			-- 		command = "my_cmd",
+			-- 		-- A list of strings, or a function that returns a list of strings
+			-- 		-- Return a single string instead of a list to run the command in a shell
+			-- 		args = { "--stdin-from-filename", "$FILENAME" },
+			-- 		-- If the formatter supports range formatting, create the range arguments here
+			-- 		range_args = function(ctx)
+			-- 			return { "--line-start", ctx.range.start[1], "--line-end", ctx.range["end"][1] }
+			-- 		end,
+			-- 		-- Send file contents to stdin, read new contents from stdout (default true)
+			-- 		-- When false, will create a temp file (will appear in "$FILENAME" args). The temp
+			-- 		-- file is assumed to be modified in-place by the format command.
+			-- 		stdin = true,
+			-- 		-- A function that calculates the directory to run the command in
+			-- 		cwd = require("conform.util").root_file({ ".editorconfig", "package.json" }),
+			-- 		-- When cwd is not found, don't run the formatter (default false)
+			-- 		require_cwd = true,
+			-- 		-- When returns false, the formatter will not be used
+			-- 		condition = function(ctx)
+			-- 			return vim.fs.basename(ctx.filename) ~= "README.md"
+			-- 		end,
+			-- 		-- Exit codes that indicate success (default { 0 })
+			-- 		exit_codes = { 0, 1 },
+			-- 		-- Environment variables. This can also be a function that returns a table.
+			-- 		env = {
+			-- 			VAR = "value",
+			-- 		},
+			-- 		-- Set to false to disable merging the config with the base definition
+			-- 		inherit = true,
+			-- 		-- When inherit = true, add these additional arguments to the command.
+			-- 		-- This can also be a function, like args
+			-- 		prepend_args = { "--use-tabs" },
+			-- 	},
+			-- 	-- These can also be a function that returns the formatter
+			-- 	other_formatter = function(bufnr)
+			-- 		return {
+			-- 			command = "my_cmd",
+			-- 		}
+			-- 	end,
+			-- },
 		},
 	})
 end

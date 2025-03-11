@@ -15,7 +15,7 @@ M.config = function()
 				enable = true,
 			},
 			shortcut = {
-				{ desc = "󰊳 Update", group = "@property", action = "Lazy update", key = "u" },
+				{ desc = "󰊳 Update", group = "@property", action = "Lazy sync", key = "u" },
 				{
 					icon = " ",
 					icon_hl = "@variable",
