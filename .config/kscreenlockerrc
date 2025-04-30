@@ -1,0 +1,8 @@
+[Daemon]
+Autolock=false
+LockOnResume=false
+Timeout=0
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/ithihas/Downloads/m2.jpg
+PreviewImage=/home/ithihas/Downloads/m2.jpg

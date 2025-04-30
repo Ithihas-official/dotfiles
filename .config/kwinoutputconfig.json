@@ -1,0 +1,99 @@
+[
+    {
+        "data": [
+            {
+                "allowSdrSoftwareBrightness": false,
+                "autoRotation": "InTabletMode",
+                "brightness": 1,
+                "colorPowerTradeoff": "PreferEfficiency",
+                "colorProfileSource": "EDID",
+                "connectorName": "eDP-1",
+                "edidHash": "fba93d484607cd9be274384044eafbfa",
+                "edidIdentifier": "BOE 1630 0 1 2015 0",
+                "highDynamicRange": false,
+                "iccProfilePath": "",
+                "mode": {
+                    "height": 1080,
+                    "refreshRate": 60012,
+                    "width": 1920
+                },
+                "overscan": 0,
+                "rgbRange": "Full",
+                "scale": 1.25,
+                "sdrBrightness": 200,
+                "sdrGamutWideness": 0,
+                "transform": "Normal",
+                "vrrPolicy": "Automatic",
+                "wideColorGamut": false
+            },
+            {
+                "allowSdrSoftwareBrightness": false,
+                "autoRotation": "InTabletMode",
+                "brightness": 1,
+                "colorPowerTradeoff": "PreferAccuracy",
+                "colorProfileSource": "EDID",
+                "connectorName": "HDMI-A-1",
+                "edidHash": "2094cd3c3671ee3f42b016f2d122fd4d",
+                "edidIdentifier": "DEL 41141 808923212 32 2015 0",
+                "highDynamicRange": false,
+                "iccProfilePath": "",
+                "mode": {
+                    "height": 1080,
+                    "refreshRate": 60000,
+                    "width": 1920
+                },
+                "overscan": 0,
+                "rgbRange": "Full",
+                "scale": 1,
+                "sdrBrightness": 200,
+                "sdrGamutWideness": 1,
+                "transform": "Normal",
+                "vrrPolicy": "Automatic",
+                "wideColorGamut": false
+            }
+        ],
+        "name": "outputs"
+    },
+    {
+        "data": [
+            {
+                "lidClosed": false,
+                "outputs": [
+                    {
+                        "enabled": true,
+                        "outputIndex": 0,
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "priority": 0
+                    }
+                ]
+            },
+            {
+                "lidClosed": false,
+                "outputs": [
+                    {
+                        "enabled": false,
+                        "outputIndex": 0,
+                        "position": {
+                            "x": 1920,
+                            "y": 108
+                        },
+                        "priority": -1
+                    },
+                    {
+                        "enabled": true,
+                        "outputIndex": 1,
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "priority": 0
+                    }
+                ]
+            }
+        ],
+        "name": "setups"
+    }
+]

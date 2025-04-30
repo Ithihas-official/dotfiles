@@ -1,0 +1,19 @@
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+ToolBarsMovable=Enabled
+
+[Recent Files]
+File1[$e]=$HOME/Documents/NCERTs Subject wise/History NCERTs/History VI class/fess1ps.pdf
+File2[$e]=$HOME/Documents/NCERTs Subject wise/History NCERTs/History VI class/fess101.pdf
+File3[$e]=$HOME/Documents/NCERTs Subject wise/History NCERTs/History VI class/fess103.pdf
+File4[$e]=$HOME/development/test/pdf_output/index1.pdf
+Name1[$e]=fess1ps.pdf
+Name2[$e]=fess101.pdf
+Name3[$e]=fess103.pdf
+Name4[$e]=index1.pdf

@@ -1,0 +1,9 @@
+[GuiConfig]
+captureMode=0
+quitAfterSaveCopyExport=true
+
+[ImageSave]
+translatedScreenshotsFolder=Screenshots
+
+[VideoSave]
+translatedScreencastsFolder=Screencasts

@@ -1,0 +1,7 @@
+[General]
+CalculatorMode=science
+ShowConstants=true
+ShowHistory=true
+
+[KCalcMainWindow]
+ToolBarsMovable=Disabled

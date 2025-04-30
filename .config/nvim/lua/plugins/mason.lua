@@ -8,7 +8,7 @@ local M = {
 
 M.execs = {
 	"quick_lint_js",
-	"eslint",
+	-- "eslint",
 	"prosemd_lsp",
 	"jdtls",
 	"lua_ls",

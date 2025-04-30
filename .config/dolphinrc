@@ -1,0 +1,31 @@
+[ContextMenu]
+ShowCopyMoveMenu=true
+
+[FoldersPanel]
+HiddenFilesShown=true
+
+[General]
+FilterBar=true
+ShowFullPathInTitlebar=true
+Version=202
+ViewPropsTimestamp=2024,12,4,20,24,39.699
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=16
+
+[PlacesPanel]
+IconSize=16
+
+[PreviewSettings]
+Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,gdk-pixbuf-thumbnailer
+
+[Search]
+Location=Everywhere
+
+[VersionControl]
+enabledPlugins=Subversion,Mercurial,Git,Bazaar
+
+[ViewPropertiesDialog]
+1920x1080 screen: Height=398
+1920x1080 screen: Width=372

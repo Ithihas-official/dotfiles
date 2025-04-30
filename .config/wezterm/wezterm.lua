@@ -8,7 +8,7 @@ end
 -- SHELL
 config.default_prog = { "/bin/zsh" }
 -- THEMES
-config.color_scheme = "BlulocoDark"
+config.color_scheme = "Codeschool (base16)"
 config.window_background_opacity = 1.0
 config.text_background_opacity = 1.0
 config.bold_brightens_ansi_colors = true
